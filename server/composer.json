@@ -1,0 +1,5 @@
+{
+    "require": {
+        "owenoj/pdf-password-protect": "^0.8.0"
+    }
+}

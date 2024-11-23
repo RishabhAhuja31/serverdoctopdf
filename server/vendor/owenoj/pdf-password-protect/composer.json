@@ -1,0 +1,53 @@
+{
+    "name": "owenoj/pdf-password-protect",
+    "description": "Laravel package to password protect pdfs",
+    "keywords": [
+        "owenoj",
+        "pdf-password-protect",
+        "pdf protection",
+        "pdf password",
+        "laravel pdf password",
+        "laravel pdf protect"
+    ],
+    "homepage": "https://github.com/owen-oj/pdf-password-protect",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Owen Jubilant",
+            "email": "owen.j@terktrendz.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0|^9.0|^10.0|^11.0",
+        "mpdf/mpdf": "^8.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.7",
+        "phpunit/phpunit": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Owenoj\\PDFPasswordProtect\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Owenoj\\PDFPasswordProtect\\PDFPasswordProtectServiceProvider"
+            ],
+            "aliases": {
+                "PDFPasswordProtect": "PDFPasswordProtect"
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@pspdfkit/nodejs": "^0.0.6",
+    "cors": "^2.8.5",
+    "docx-pdf": "^0.0.1",
+    "express": "^4.21.1",
+    "libreoffice-convert": "^1.6.0",
+    "muhammara": "^5.2.0",
+    "multer": "^1.4.5-lts.1",
+    "node-qpdf": "^1.0.3",
+    "pdf-lib": "^1.17.1",
+    "pspdfkit": "^2024.8.0"
+  }
+}
