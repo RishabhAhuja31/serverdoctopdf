@@ -15,6 +15,16 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 module.exports = async (req, res) => {
+    // Allow CORS by adding the necessary headers
+    res.setHeader('Access-Control-Allow-Origin', '*');  // Allow all origins
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS'); // Allow these HTTP methods
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); // Allow these headers
+
+    // If the method is OPTIONS (preflight request), return a 200
+    if (req.method === 'OPTIONS') {
+        return res.status(200).end();
+    }
+
     // Handle only POST requests for file conversion
     if (req.method === 'POST') {
         // Use Multer to handle file upload
